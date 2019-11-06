@@ -31,3 +31,11 @@ var priceOne = 10;
 var priceTwo = 20;
 var totalPrice = priceOne + priceTwo;
 console.log(totalPrice)
+console.log("----------")
+
+
+var carBrand;
+carName = "Tesla";
+var carModel;
+carModel = "Model Y";
+console.log(carName + " " + carModel);
