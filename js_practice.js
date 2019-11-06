@@ -15,4 +15,6 @@ c = 10;
 d = 20;
 e = c * d;
 
-console.log(e)
+console.log(e);
+
+// This is how to comment :)
