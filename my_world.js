@@ -2,11 +2,15 @@ function World(name, currency, size) {
     this.name = name;
     this.currency = currency;
     this.size = size;
+    this.greeting = function () {
+        alert('Hello user welcome to ' + this.name + '.');
+    };
 };
 
 let k = new World("Kamikaze Heaven", "KHG", 2000);
 console.log(k);
 console.log("Hello welcome to " + world.name + ".");
+
 
 function Person(fn, ln, age, gender, nationality, money) {
     this.firstName = fn;
