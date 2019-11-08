@@ -3,14 +3,12 @@ function World(name, currency, size) {
     this.currency = currency;
     this.size = size;
     this.greeting = function () {
-        alert('Hello user welcome to ' + this.name + '.');
+        return console.log('Hello user welcome to ' + this.name + '.');
     };
 };
 
 let k = new World("Kamikaze Heaven", "KHG", 2000);
-console.log(k);
-console.log("Hello welcome to " + world.name + ".");
-
+console.log(k.greeting);
 
 function Person(fn, ln, age, gender, nationality, money) {
     this.firstName = fn;
