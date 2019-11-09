@@ -28,6 +28,14 @@ function House(color, size, price, age) {
     this.neighbors = [];
 }
 
+function Bank() {
+    //Name
+    //Owner
+    //Size
+    //Color
+    //Reserve
+    //Location
+}
 // Creating people
 let em = new Person("Elon", "Musk", 48, "male", "Canadian", 0);
 document.getElementById("p1-name").innerHTML = em.firstName + " " + em.lastName;
