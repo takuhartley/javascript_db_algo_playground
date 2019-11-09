@@ -1,3 +1,10 @@
+/*
+This is a sandbox world created by me,
+where I can test out random code, tips & tricks,
+to hone my skills to become a better programmer
+*/
+
+//Create an object method
 function World(name, currency, size) {
     this.name = name;
     this.currency = currency;
@@ -6,13 +13,21 @@ function World(name, currency, size) {
         return console.log('Hello user welcome to ' + this.name + '.');
     };
 };
+//Create a World object
+let k = new World("Kamikaze Heaven", "KHG", 2000);
+//Print to DOM
+document.getElementById("a1").innerHTML = k.name;
 
 //Need to create a function where user can input their name to be the controller
-function God(name) {
-    //Name
+function God(devineName) {
+    this.godname = devineName;
+};
+
+function addName() {
+    var gn = document.getElementById("userInput").value;
+    alert("Welcome " + gn);
+    document.getElementById("gn1").innerHTML = gn;
 }
-let k = new World("Kamikaze Heaven", "KHG", 2000);
-document.getElementById("a1").innerHTML = k.name;
 
 function Person(fn, ln, age, gender, nationality, money) {
     this.firstName = fn;
