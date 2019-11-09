@@ -7,8 +7,8 @@ function World(name, currency, size) {
     };
 };
 
-var k = new World("Kamikaze Heaven", "KHG", 2000);
-document.getElementById("a1").innerHTML = k;
+let k = new World("Kamikaze Heaven", "KHG", 2000);
+document.getElementById("a1").innerHTML = k.name;
 
 function Person(fn, ln, age, gender, nationality, money) {
     this.firstName = fn;
