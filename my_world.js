@@ -30,13 +30,20 @@ function House(color, size, price, age) {
 
 // Creating people
 let em = new Person("Elon", "Musk", 48, "male", "Canadian", 0);
-document.getElementById("a1").innerHTML = em;
+document.getElementById("p1-name").innerHTML = em.firstName + " " + em.lastName;
+document.getElementById("p1-age").innerHTML = em.age;
+document.getElementById("p1-gender").innerHTML = em.gender;
+document.getElementById("p1-nationality").innerHTML = em.nationality;
+document.getElementById("p1-money").innerHTML = em.money;
+
 let mz = new Person("Mark", "Zuckerberg", 35, "male", "American", 0);
-console.log(mz);
+document.getElementById("p2").innerHTML = mz;
+
 let jb = new Person("Jeff", "Bezos", 55, "male", "American", 0);
-console.log(jb);
+document.getElementById("p3").innerHTML = jb;
+
 let lp = new Person("Larry", "Page", 46, "male", "American", 0);
-console.log(lp);
+document.getElementById("p4").innerHTML = lp;
 
 // Creating houses
 let h1 = new House("Blue", 1000, 100000, 4);
