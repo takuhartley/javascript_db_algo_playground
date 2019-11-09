@@ -7,6 +7,10 @@ function World(name, currency, size) {
     };
 };
 
+//Need to create a function where user can input their name to be the controller
+function God(name) {
+    //Name
+}
 let k = new World("Kamikaze Heaven", "KHG", 2000);
 document.getElementById("a1").innerHTML = k.name;
 
