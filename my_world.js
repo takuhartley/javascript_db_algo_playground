@@ -4,7 +4,12 @@ where I can test out random code, tips & tricks,
 to hone my skills to become a better programmer
 */
 
-//Create an object method
+//Need to create a function where user can input their name to be the controller
+function God(devineName) {
+    this.godname = devineName;
+};
+
+//Create object method
 function World(name, currency, size) {
     this.name = name;
     this.currency = currency;
@@ -13,22 +18,8 @@ function World(name, currency, size) {
         return console.log('Hello user welcome to ' + this.name + '.');
     };
 };
-//Create a World object
-let k = new World("Kamikaze Heaven", "KHG", 2000);
-//Print to DOM
-document.getElementById("a1").innerHTML = k.name;
 
-//Need to create a function where user can input their name to be the controller
-function God(devineName) {
-    this.godname = devineName;
-};
-
-function addName() {
-    var gn = document.getElementById("userInput").value;
-    alert("Welcome " + gn);
-    document.getElementById("gn1").innerHTML = gn;
-}
-
+//Create person object
 function Person(fn, ln, age, gender, nationality, money) {
     this.firstName = fn;
     this.lastName = ln;
@@ -39,6 +30,7 @@ function Person(fn, ln, age, gender, nationality, money) {
     this.house = [];
 }
 
+//Create house object
 function House(color, size, price, age) {
     this.color = color;
     this.size = size;
@@ -47,39 +39,51 @@ function House(color, size, price, age) {
     this.neighbors = [];
 }
 
-function Bank() {
-    //Name
-    //Owner
-    //Size
-    //Color
-    //Reserve
-    //Location
+//Create bank object
+function Bank(name, size, color, reserve) {
+    this.name = name;
+    this.size = size;
+    this.color = color;
+    this.reserve = reserve;
+    //Neighbor should be recorded as list which is updated through function of appending.
+    //Bank has owner which can be set as well
 }
-// Creating people
+
+//Create a World object
+let k = new World("Kamikaze Heaven", "KHG", 2000);
+
+//Print to DOM
+document.getElementById("a1").innerHTML = k.name;
+
+//Function that takes onclick event
+function addName() {
+    //Saves to variable
+    var gn = document.getElementById("userInput").value;
+    //Create an alert just to see if it's working
+    alert("Welcome " + gn);
+    //Return gn to print it out to DOM
+    //return gn;  
+}
+
+//Creating people
 let em = new Person("Elon", "Musk", 48, "male", "Canadian", 0);
+let jb = new Person("Jeff", "Bezos", 55, "male", "American", 0);
+let mz = new Person("Mark", "Zuckerberg", 35, "male", "American", 0);
+let lp = new Person("Larry", "Page", 46, "male", "American", 0);
+
+// Creating houses
+let h1 = new House("Blue", 1000, 100000, 4);
+let h2 = new House("Yellow", 1100, 110000, 3);
+let h3 = new House("Red", 1200, 120000, 2);
+let h4 = new House("Greeb", 1300, 130000, 1);
+
+//Printing to DOM
+document.getElementById("gn1").innerHTML = gn;
 document.getElementById("p1-name").innerHTML = em.firstName + " " + em.lastName;
 document.getElementById("p1-age").innerHTML = em.age;
 document.getElementById("p1-gender").innerHTML = em.gender;
 document.getElementById("p1-nationality").innerHTML = em.nationality;
 document.getElementById("p1-money").innerHTML = em.money;
-
-let mz = new Person("Mark", "Zuckerberg", 35, "male", "American", 0);
 document.getElementById("p2").innerHTML = mz;
-
-let jb = new Person("Jeff", "Bezos", 55, "male", "American", 0);
 document.getElementById("p3").innerHTML = jb;
-
-let lp = new Person("Larry", "Page", 46, "male", "American", 0);
 document.getElementById("p4").innerHTML = lp;
-
-// Creating houses
-let h1 = new House("Blue", 1000, 100000, 4);
-console.log(h1);
-let h2 = new House("Yellow", 1100, 110000, 3);
-console.log(h2);
-let h3 = new House("Red", 1200, 120000, 2);
-console.log(h3);
-let h4 = new House("Greeb", 1300, 130000, 1);
-console.log(h4);
-
-h1.neighbors = h2;
