@@ -7,8 +7,8 @@ function World(name, currency, size) {
     };
 };
 
-let k = new World("Kamikaze Heaven", "KHG", 2000);
-console.log(k.greeting);
+var k = new World("Kamikaze Heaven", "KHG", 2000);
+document.getElementById("a1").innerHTML = k;
 
 function Person(fn, ln, age, gender, nationality, money) {
     this.firstName = fn;
@@ -30,7 +30,7 @@ function House(color, size, price, age) {
 
 // Creating people
 let em = new Person("Elon", "Musk", 48, "male", "Canadian", 0);
-console.log(em);
+document.getElementById("a1").innerHTML = em;
 let mz = new Person("Mark", "Zuckerberg", 35, "male", "American", 0);
 console.log(mz);
 let jb = new Person("Jeff", "Bezos", 55, "male", "American", 0);
