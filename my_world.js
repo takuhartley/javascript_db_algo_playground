@@ -49,21 +49,11 @@ function Bank(name, size, color, reserve) {
     //Bank has owner which can be set as well
 }
 
+//Creating variables
+var gn;
+
 //Create a World object
 let k = new World("Kamikaze Heaven", "KHG", 2000);
-
-//Print to DOM
-document.getElementById("a1").innerHTML = k.name;
-
-//Function that takes onclick event
-function addName() {
-    //Saves to variable
-    var gn = document.getElementById("userInput").value;
-    //Create an alert just to see if it's working
-    alert("Welcome " + gn);
-    //Return gn to print it out to DOM
-    //return gn;  
-}
 
 //Creating people
 let em = new Person("Elon", "Musk", 48, "male", "Canadian", 0);
@@ -77,7 +67,18 @@ let h2 = new House("Yellow", 1100, 110000, 3);
 let h3 = new House("Red", 1200, 120000, 2);
 let h4 = new House("Greeb", 1300, 130000, 1);
 
+//Function that takes onclick event
+function addName() {
+    var gn = document.getElementById("userInput").value;
+    //Saves to variable
+    //Create an alert just to see if it's working
+    console.log("Welcome to " + k.name + " "+ gn + ".");
+    //Return gn to print it out to DOM
+    return gn;  
+}
+
 //Printing to DOM
+document.getElementById("a1").innerHTML = k.name;
 document.getElementById("gn1").innerHTML = gn;
 document.getElementById("p1-name").innerHTML = em.firstName + " " + em.lastName;
 document.getElementById("p1-age").innerHTML = em.age;
