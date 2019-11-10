@@ -49,6 +49,15 @@ function Bank(name, size, color, reserve) {
     this.owner = Person()//Bank has owner which can be set as well
 }
 
+function Test1(property1) {
+    this.prop1 = property1;
+}
+function Test2(prop1) {
+    this.prop1 = prop1;
+    this.inherit = Test1();
+}
+let a = new Test1(10);
+console.log(a.prop1);
 //Creating variables
 var gn;
 
@@ -72,7 +81,7 @@ let KamikazeBank = new Bank("Kamikaze Federal Bank", 2000, "Yellow", 100000000);
 
 //Bank owner
 KamikazeBank.owner = jb;
-console.log("I " + KamikazeBank.owner.Person.name + "am the owner of " + KamikazeBank.name);
+//console.log("I " + KamikazeBank.owner.Person.name + "am the owner of " + KamikazeBank.name);
 //Function that takes onclick event
 function addName() {
     gn = document.getElementById("userInput").value;
