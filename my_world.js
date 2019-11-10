@@ -45,8 +45,8 @@ function Bank(name, size, color, reserve) {
     this.size = size;
     this.color = color;
     this.reserve = reserve;
-    //Neighbor should be recorded as list which is updated through function of appending.
-    //Bank has owner which can be set as well
+    this.neighbors = [];//Neighbor should be recorded as list which is updated through function of appending.
+    this.owner = [];//Bank has owner which can be set as well
 }
 
 //Creating variables
@@ -67,6 +67,9 @@ let h2 = new House("Yellow", 1100, 110000, 3);
 let h3 = new House("Red", 1200, 120000, 2);
 let h4 = new House("Greeb", 1300, 130000, 1);
 
+//Bank owner
+Bank.owner = em;
+console.log(Bank.owner);
 //Function that takes onclick event
 function addName() {
     gn = document.getElementById("userInput").value;
