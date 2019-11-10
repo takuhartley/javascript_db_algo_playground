@@ -52,12 +52,13 @@ function Bank(name, size, color, reserve) {
 function Test1(property1) {
     this.prop1 = property1;
 }
-function Test2(prop1) {
-    this.prop1 = prop1;
+function Test2() {
     this.inherit = Test1();
 }
 let a = new Test1(10);
-console.log(a.prop1);
+console.log(a);
+let b = Test2();
+console.log(b);
 //Creating variables
 var gn;
 
