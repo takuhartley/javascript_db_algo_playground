@@ -67,6 +67,8 @@ let h2 = new House("Yellow", 1100, 110000, 3);
 let h3 = new House("Red", 1200, 120000, 2);
 let h4 = new House("Greeb", 1300, 130000, 1);
 
+//Creating Bank
+let KamikazeBank = new Bank("Kamikaze Federal Bank", 2000, "Yellow", 100000000);
 //Bank owner
 Bank.owner = em;
 console.log(Bank.owner);
