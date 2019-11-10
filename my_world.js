@@ -69,17 +69,15 @@ let h4 = new House("Greeb", 1300, 130000, 1);
 
 //Function that takes onclick event
 function addName() {
-    var gn = document.getElementById("userInput").value;
-    //Saves to variable
-    //Create an alert just to see if it's working
-    console.log("Welcome to " + k.name + " "+ gn + ".");
+    gn = document.getElementById("userInput").value;
+    console.log(gn);
     //Return gn to print it out to DOM
-    return gn;  
+    return gn;
 }
 
 //Printing to DOM
+document.getElementById("gn1").innerHTML = "Welcome to " + k.name + " " + gn + "!";
 document.getElementById("a1").innerHTML = k.name;
-document.getElementById("gn1").innerHTML = gn;
 document.getElementById("p1-name").innerHTML = em.firstName + " " + em.lastName;
 document.getElementById("p1-age").innerHTML = em.age;
 document.getElementById("p1-gender").innerHTML = em.gender;
